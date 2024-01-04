@@ -1,2 +1,2 @@
-# SATURN AIRLINES
-Primera pagina web. Muy mal hecha, espero ver progreso
+# CURSO FRONT END TEORICO
+Ejercicios y paginas web creadas durante el curso
