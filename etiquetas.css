@@ -46,7 +46,7 @@ nav
         }
         nav p
         {
-            justify-self: left;
+            justify-self: flex-start;
             margin: 0;
             align-self: center;
             font-family: 'Nasa', sans-serif;            
@@ -94,7 +94,7 @@ header
     align-items: center;
     justify-content: center;
 }
-    header .headerblack
+    .headerblack
     {
         position: relative;
         background-color: black;
@@ -200,50 +200,76 @@ main
 
     .sect2grid
     {
+        position: relative;
         display: grid;
         justify-content: center;
         align-items: center;
         background-color: black;
+        background-size: cover;
         height:800px;
-        grid-template-rows: 100px 1fr;
+        grid-template-rows: 250px 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-areas: 
         "sect2header sect2header sect2header sect2header"
         "sect2item1 sect2item2 sect2item3 sect2item4"
         ;
     }
+        
         .sect2header
         {
             grid-area: sect2header;
             margin: auto;
+        }
+        
+        .sect2header h1
+        {
             padding: 10px;
             font-weight: 800;
             text-align: center;
             color: white;
             font-size: 56px;
-
         }
-        .sect2item1
+        .sect2header p
         {
-            grid-area: sect2item1;
-            background-color: blue;
-            width: 75%;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+        }
+        .sect2item
+        {
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(231, 231, 231);
+            width: 90%;
             margin: auto;
             text-align: center;
-            height: 90%;
+            height: 500px;
         }
-        .sect2item2
+        .sect2item h1
         {
-            grid-area: sect2item2;
+            padding: 15px 10px;
+            width: 100%;
+            background-color: white;
+
         }
-        .sect2item3
+        .sect2item img
         {
-            grid-area: sect2item3;
+            max-width: 100%;
+            width: 100%;
+            margin: auto;
+            
+            
         }
-        .sect2item4
+        .sect2item p
         {
-            grid-area: sect2item4;
+            margin: auto;
+            margin-top: 0;
+            justify-self:center;
+            padding: 15px;
+            text-align: justify;
         }
+        
 
 form
 {
