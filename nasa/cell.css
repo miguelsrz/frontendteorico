@@ -1,0 +1,324 @@
+html
+{
+    font-size: 6.25%;
+}
+*
+{
+    font-size: 16rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.pagegrid
+{
+    display: grid;
+    grid-template-rows: 85px 640px 1fr 1350px;
+    grid-template-areas: 
+    "nav"
+    "header"
+    "main"
+    "footer"
+    ;
+}
+.parentbg
+{
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+.figbg
+{
+    z-index: -1;
+    filter: brightness(70%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    min-width: 100%;
+}
+.imgbg
+{
+    min-width: 100%
+}
+
+.button-black-arrow-right
+{
+    margin: 1em 0 1em 0;
+}
+nav
+{
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    padding: 15px;
+}
+    .navgrid
+    {
+        display: grid;
+        width: 100%;
+        height: 55px;
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-areas: 
+        "menu logo search"
+        ;
+    }
+    .navsearch, .navlinks
+    {
+        display: none;
+    }
+    .navsmallmenu
+    {
+        grid-area: menu;
+    }
+    .navlogo
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: logo;
+    }
+        .navlogo img
+        {
+            width: 60px;
+            height: 50px;
+        }
+    .navsmallsearch
+    {
+        grid-area: search;
+    }
+
+
+
+
+.mainheader
+{
+    grid-area: header;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "hart "
+    "hsect"
+    ;
+}
+
+    .hart
+    {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        padding: 1.5em;
+    }
+    .hsect
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 0 1.5em 1em;
+        }
+
+
+
+main
+{
+    grid-area: main;
+    display: grid;
+    grid-template-rows:1fr 880px max-content 880px 1fr 500px 700px;
+    grid-template-areas:
+    "fnews"
+    "fstory"
+    "imgday"
+    "info"
+    "lnews"
+    "explore"
+    "topics"
+    ;
+}
+
+
+footer
+{
+    grid-area: footer;
+
+}
+.fnews
+{
+    grid-area: fnews;
+    background-color:blueviolet;
+    padding: 3em 2.5em;
+    max-height: 2100px;
+}
+    .newsgrid
+    {
+        display: grid;
+        grid-template-rows: 150px 1265px 1fr;
+        grid-template-areas: 
+        "nheader"
+        "nblock"
+        "nflex"
+        ;
+    }
+        .nheader
+        {
+            grid-area:nheader;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .nblock
+        {
+            grid-area:nblock ;
+            display: grid;
+            grid-template-rows: 2fr 2fr 1fr 1fr;
+            
+        }
+            
+            .nbpadding
+            {
+                width: 100%;
+                height: 100%;
+                padding-bottom:1.5em ;
+            }
+            .nbflex
+            {
+                width: 100%;
+                height: 100%;
+            }
+
+        .nflex
+        {
+            grid-area: nflex;
+            display: flex;
+            flex-direction: column;
+            margin-top: 1em;
+            max-height: 600px;
+        }
+            .nfpadding
+            {
+                width: 100%;
+                height: 100%;
+                padding-bottom:1.5em ;
+            }
+            
+            .nfgrid
+            {
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-columns: 105px 2fr;
+                grid-template-areas: 
+                "nfimg nftext"
+                ;
+            }
+                .nffig
+                {
+                    grid-area: nfimg;
+                    padding-right: 1.5em;
+                }
+                    .nfimg
+                    {
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 100%;
+                    }
+                
+                .nftext
+                {
+                    grid-area: nftext;
+                }
+
+
+.banner
+{
+    padding: 8em 2.5em;
+}
+
+    .bannergrid
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 100%;
+    }
+
+        .bannerflex
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+        }
+
+.fstory
+{
+    grid-area: fstory;
+
+}
+.imgday
+{
+    grid-area: imgday;
+    background-color:blueviolet;
+    padding: 5em 1.5em;
+    height: max-content;
+}
+    
+    .imgdaygrid
+    {
+        display: grid;
+        grid-template-rows: 80px max-content max-content   ;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: 
+        "himgday"
+        "fimgday"
+        "simgday"
+        ;
+
+    }
+
+        .himgday
+        {
+            grid-area: himgday;
+        }
+        .fimgday
+        {
+            display: flex;
+            flex-direction: column;
+            grid-area: fimgday;
+        }
+            .img-imgday
+            {
+                width: 100%;
+            }
+
+        .simgday
+        {
+            grid-area: simgday;
+        }
+        
+
+
+.info
+{
+    grid-area: info;
+
+}
+.lnews
+{
+    grid-area: lnews;
+    background-color:blueviolet;
+    padding: 3em 2.5em;
+    max-height: 2100px;
+
+}
+.explore
+{
+    grid-area: explore;
+
+}
+.topics
+{
+    grid-area: topics;
+    background-color:blueviolet;
+
+}

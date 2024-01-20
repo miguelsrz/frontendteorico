@@ -1,0 +1,229 @@
+
+.pagegrid
+{
+    display: grid;
+    grid-template-rows: 85px 640px 1fr 600px;
+    grid-template-areas: 
+    "nav"
+    "header"
+    "main"
+    "footer"
+    ;
+}
+.button-black-arrow-right
+{
+    margin: 0;
+    margin-top: 1em ;
+}
+nav
+{
+    grid-area: nav;
+    background-color: aqua;
+}
+    .navgrid
+    {
+        display: grid;
+        width: 100%;
+        height: 55px;
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-areas: 
+        "search logo links"
+        ;
+    }
+    .navsmallmenu, .navsmallsearch
+    {
+        display: none;
+    }
+    .navsearch
+    {
+        grid-area: search;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+        .navsearch button
+        {
+            padding: 16px ;
+            width: 85%;
+        }
+        .navsearch input
+        {
+            width: 50%;
+        }
+        
+    .navlinks
+    {
+        grid-area: links;
+        display: flex; 
+        justify-content: space-around;  
+        align-items: center;     
+    }
+header
+{
+    grid-area: header;
+
+}
+    .hsect
+    {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+main
+{
+    grid-area: main;
+    display: grid;
+    grid-template-rows:1fr 640px max-content 800px 1fr 640px 900px;
+    grid-template-areas:
+    "fnews"
+    "fstory"
+    "imgday"
+    "info"
+    "lnews"
+    "explore"
+    "topics"
+    ;
+}
+footer
+{
+    grid-area: footer;
+
+}
+.fnews
+{
+    display: flex;
+    justify-content: center;
+    grid-area: fnews;
+    background-color:green;
+    max-height: 816px;
+}
+    .newsgrid
+        {
+            display: grid;
+            grid-template-rows: 124px 400px 1fr;
+            grid-template-areas: 
+            "nheader"
+            "nblock"
+            "nflex"
+            ;
+            max-width: 1300px;
+        }
+            .nheader
+            {
+                grid-area:nheader;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .nblock
+            {
+                grid-area:nblock ;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas: 
+                "nb1 nb1 nb2 nb3"
+                "nb1 nb1 nb2 nb4"
+            }
+
+                .nb1pad
+                {
+                    padding-right: 1em;
+                }
+
+            .nflex
+            {
+                grid-area: nflex;
+                display: flex;
+                flex-direction: row;
+                margin-top: 1em;
+            }  
+
+
+.banner
+{
+
+    display: flex;
+    justify-content: center;
+}
+
+    .bannergrid
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 100%;
+        max-width: 1300px;
+    }
+
+        .bannerflex
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+        }
+.fstory
+{
+    grid-area: fstory;
+
+}
+.imgday
+{
+    grid-area: imgday;
+    background-color:green;
+    display: flex;
+    justify-content: center;
+}
+
+    .imgdaygrid
+    {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: 160px 1fr;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: 
+        "himgday fimgday"
+        "simgday fimgday"
+    
+
+        ;
+        max-width: 1100px;
+    }
+        .fimgday
+        {                
+        display: flex;
+        justify-content: flex-start;
+        grid-area: fimgday;
+        padding: 0 2em;
+        }
+        
+        .simgday, .himgday
+        {
+            padding-right: 5em;
+        }
+
+.info
+{
+    grid-area: info;
+
+}
+.lnews
+{
+    display: flex;
+    justify-content: center;
+    grid-area: lnews;
+    background-color:green;
+    max-height: 816px;
+
+}
+.explore
+{
+    grid-area: explore;
+
+}
+.topics
+{
+    grid-area: topics;
+    background-color:green;
+
+}
