@@ -24,6 +24,7 @@ nav
     {
         display: grid;
         width: 100%;
+        max-width: 1800px;
         height: 55px;
         grid-template-columns: 2fr 1fr 2fr;
         grid-template-areas: 
@@ -57,11 +58,17 @@ nav
         justify-content: space-around;  
         align-items: center;     
     }
-header
+.mainheader
 {
     grid-area: header;
-
+    display: flex;
+    justify-content: center;
 }
+    .headergrid
+    {
+        padding: 0 2.5em 0 2.5em;
+        max-width: 1800px;
+    }
     .hsect
     {
         display: grid;
@@ -72,7 +79,7 @@ main
 {
     grid-area: main;
     display: grid;
-    grid-template-rows:1fr 640px max-content 800px 1fr 640px 900px;
+    grid-template-rows:1fr 640px max-content 800px 1fr 640px max-content;
     grid-template-areas:
     "fnews"
     "fstory"
@@ -83,11 +90,7 @@ main
     "topics"
     ;
 }
-footer
-{
-    grid-area: footer;
 
-}
 .fnews
 {
     display: flex;
@@ -187,8 +190,9 @@ footer
     
 
         ;
-        max-width: 1100px;
+        max-width: 1300px;
     }
+    
         .fimgday
         {                
         display: flex;
@@ -225,5 +229,113 @@ footer
 {
     grid-area: topics;
     background-color:green;
+    display: flex;
+    justify-content: center;
 
 }
+
+.topicsgrid
+{
+    max-width: 1600px;
+    overflow-x:hidden;
+    width: 100%;
+}
+
+.tcardcontainer
+{
+    grid-area: tcardcontainer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    margin-bottom: 0;
+    width: 100%;
+    overflow: auto;
+}
+.tcard
+{
+    min-width: 24.5%;
+    height: 90%;
+    margin: 0;
+}
+.tcard1
+{
+    margin-left: 0;
+}
+.tcard4
+{
+    margin-right: 0;
+}
+
+
+footer
+{
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+}
+
+.footergrid
+    {
+        display: grid;
+        height: 100%;
+        grid-template-rows: 2fr 1.5fr 1.5fr 1fr 1fr;
+        grid-template-columns: repeat(6,1fr);
+        grid-template-areas: 
+        "logofooter logofooter logofooter logofooter logofooter logofooter"
+        "nasaabout nasaabout footerlinks footerlinks footerlinks footersocial"
+        "nasaabout nasaabout footerlinks footerlinks footerlinks ."
+        "nasainfo nasainfo nasainfo nasainfo nasainfo nasainfo"
+        "pageinfo pageinfo pageinfo pageinfo pageinfo pageinfo"
+        ;
+
+        max-width: 1350px;
+    }
+    .footerlinks
+    {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-auto-rows: auto;
+
+    }
+    .footersocial
+    {
+        justify-content: space-between;
+    }
+    .nasainfo
+    {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-auto-rows: auto;
+    }
+        .aflinks-grey
+        {
+            margin-bottom: 1em;
+        }
+    .pageinfo
+    {
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    @media (min-width: 1300px) {
+        .nasainfo
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+            .aflinks-grey
+            {
+                margin-bottom: 0;
+            }
+        .tcard
+        {
+            min-width: 24.5%;
+            height: 700px;
+            margin: 0 0 2em 0;
+        }
+    }

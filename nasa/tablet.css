@@ -20,6 +20,10 @@ nav
 .mainheader
 {
     grid-area: header;
+    
+}
+    .headergrid
+    {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 4fr 1fr;
@@ -27,8 +31,7 @@ nav
     "hart . "
     "hsect hsect"
     ;
-}
-
+    }
    .hart
    {
         grid-area: hart;
@@ -43,7 +46,7 @@ main
 {
     grid-area: main;
     display: grid;
-    grid-template-rows:1fr 640px max-content 880px 1fr 450px 1300px;
+    grid-template-rows:1fr 640px max-content 880px 1fr 450px max-content;
     grid-template-areas:
     "fnews"
     "fstory"
@@ -54,11 +57,7 @@ main
     "topics"
     ;
 }
-footer
-{
-    grid-area: footer;
 
-}
 .fnews
 {
     grid-area: fnews;
@@ -146,13 +145,13 @@ footer
         }
             .fimgday
             {                
-               display: flex;
-               justify-content: center;
+                display: flex;
                 grid-area: fimgday;
             }
             .img-imgday
             {
                 max-width: 800px;
+                align-self: center;
             }
 .info
 {
@@ -178,3 +177,43 @@ footer
     background-color:red;
 
 }
+
+
+.tcard
+{
+    min-width: 90%;
+    height: 600px;
+    margin: 0 .75em 0 .75em;
+}
+
+
+
+
+
+footer
+{
+    grid-area: footer;
+
+}
+
+.footergrid
+    {
+        display: grid;
+        height: 100%;
+        grid-template-rows: repeat(4,1fr);
+        grid-template-columns: repeat(4,1fr);
+        grid-template-areas: 
+        "logofooter logofooter logofooter logofooter"
+        "nasaabout nasaabout footerlinks footerlinks"
+        "nasaabout nasaabout footerlinks footerlinks"
+        "footersocial nasainfo nasainfo nasainfo"
+        "footersocial nasainfo nasainfo nasainfo"
+        "pageinfo pageinfo pageinfo pageinfo"
+        ;
+    }
+
+    .nasaabout
+    {
+        padding: 0 2em 2em 0;
+        
+    }
