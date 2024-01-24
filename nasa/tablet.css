@@ -1,7 +1,17 @@
+.finterssbold36
+{
+    font-size: 54rem;
+}
+.fpublicsw-white14
+{
+    font-size: 18rem;
+    line-height: 32rem;
+}
+
 .pagegrid
 {
     display: grid;
-    grid-template-rows: 90px 640px 1fr 850px;
+    grid-template-rows: 90px max-content 1fr 850px;
     grid-template-areas: 
     "nav"
     "header"
@@ -13,14 +23,14 @@
 nav
 {
     grid-area: nav;
-    background-color: aqua;
 }
 
 
 .mainheader
 {
     grid-area: header;
-    
+    min-height: 640px;
+
 }
     .headergrid
     {
@@ -42,6 +52,11 @@ nav
         display: grid;
         grid-template-columns: repeat(3, 1fr);
    } 
+
+   .hsect hr
+   {
+    width: 90%;
+   }
 main
 {
     grid-area: main;
@@ -61,7 +76,6 @@ main
 .fnews
 {
     grid-area: fnews;
-    background-color:red;
     max-height: 1350px;
 }
     .newsgrid
@@ -125,7 +139,7 @@ main
 .imgday
 {
     grid-area: imgday;
-    background-color:red;
+    
 
 }
 
@@ -161,7 +175,7 @@ main
 .lnews
 {
     grid-area: lnews;
-    background-color:red;
+    
     max-height: 1350px;
 
 
@@ -174,7 +188,7 @@ main
 .topics
 {
     grid-area: topics;
-    background-color:red;
+    
 
 }
 

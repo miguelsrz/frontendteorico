@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="tablet.css" media="screen and (min-width: 648px)"> 
     <link rel="stylesheet" href="desktop.css" media="screen and (min-width: 1024px)"> 
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&display=swap" rel="stylesheet">
+
     <title>NASA CLONE</title>
 </head>
 <body>
@@ -15,37 +19,44 @@
         <nav>
             <div class="navgrid allgrid">
 
-                <button class="navsmallmenu">
-                    MENU
+                <button class="navsmallmenu nvsmall nvbsmall objhovfoc">
+                    <hr>
+                    <hr>
+                    <hr>
                 </button>
-                <button class="navsmallsearch">
+                <button class="navsmallsearch nvsmall nvbsmall objhovfoc">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="white" stroke="white" stroke-width="0" viewBox="0 0 16 16"><path fill-rule="evenodd" stroke="none" d="M12.027 9.92 16 13.95 14 16l-4.075-3.976A6.465 6.465 0 0 1 6.5 13C2.91 13 0 10.083 0 6.5 0 2.91 2.917 0 6.5 0 10.09 0 13 2.917 13 6.5a6.463 6.463 0 0 1-.973 3.42zM1.997 6.452c0 2.48 2.014 4.5 4.5 4.5 2.48 0 4.5-2.015 4.5-4.5 0-2.48-2.015-4.5-4.5-4.5-2.48 0-4.5 2.014-4.5 4.5z"/>
                     SEARCH
+                    </svg>
                 </button>
 
                 
                 <div class="navsearch">
-                    <button>
-                        <span>Explore</span>
+                    <button class="navbutton objhovfoc">
+                        <span class="finterssbold18">Explore</span>
+                        <svg class="svgexplore" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" stroke="#ffffff" stroke-width="0"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="icomoon-ignore"> </g> <path d="M15.976 2.656c-7.366 0-13.337 5.97-13.337 13.337s5.97 13.337 13.337 13.337 13.337-5.97 13.337-13.337-5.97-13.337-13.337-13.337zM15.976 28.262c-6.765 0-12.27-5.504-12.27-12.27s5.505-12.27 12.27-12.27 12.27 5.505 12.27 12.27c0 6.765-5.505 12.27-12.27 12.27z" fill="#ffffff"> </path> <path d="M15.214 19.175l0.754 0.754 6.035-6.035-0.754-0.754-5.281 5.281-5.256-5.256-0.754 0.754 3.013 3.013z" fill="#ffffff"> </path> </g></svg>
                     </button>
-                    <input type="text" placeholder="Search...">
+                    <input class="fpublicsw-grey14 navinput" type="text" placeholder="Search...">
                 </div>
                 <figure class="navlogo">
-                    <img src="imgnasaclone/NASA_logo.svg.png" alt="logo">
+                    <img class="objhovfoc" src="imgnasaclone/NASA_logo.svg.png" alt="logo">
                 </figure>
                 <div class="navlinks">
-                    <button>
-                        <span>News & Events</span>
+                    <button class="navbutton objhovfoc">
+                        <span class="finterssbold18">News & Events</span>
+                        <svg class="svgspannav" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" stroke="#ffffff" stroke-width="1.6"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="icomoon-ignore"> </g> <path d="M15.233 19.175l0.754 0.754 6.035-6.035-0.754-0.754-5.281 5.281-5.256-5.256-0.754 0.754 3.013 3.013z" fill="#ffffff"> </path> </g></svg>
                     </button>
-                    <button>
-                        <span>Multimedia</span>
+                    <button class="navbutton objhovfoc">
+                        <span class="finterssbold18">Multimedia</span>
+                        <svg class="svgspannav" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" stroke="#ffffff" stroke-width="1.6"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="icomoon-ignore"> </g> <path d="M15.233 19.175l0.754 0.754 6.035-6.035-0.754-0.754-5.281 5.281-5.256-5.256-0.754 0.754 3.013 3.013z" fill="#ffffff"> </path> </g></svg>
                     </button>
-                    <a href="https://plus.nasa.gov/">
-                        <span>
+                    <a class="objhovfoc navbutton" href="https://plus.nasa.gov/">
+                        <span class="finterssbold18 nasalive">
                             NASA+
-                        </span>
-                        <span class="livetext">
-                            LIVE
-                        </span>
+                            <span class="livetext fdmmono-white8">
+                                LIVE
+                            </span>
+                        </span>    
                     </a>
                 </div>
                 
@@ -58,55 +69,57 @@
             </figure>
             <div class="headergrid">
                 <article class="hart">
-                    <h2>
+                    <h2 class="finterssbold36">
                         Science Launching to Space Station
                     </h2>
-                    <p>
+                    <p class="fpublicsw-white14">
                         Northrop Grumman's 20th commercial resupply services mission
                         to the International Space Station will deliver scientific research,
                         crew supplies, and hardware to the orbiting laboratory for NASA.
                     </p>
-                    <a  href="">
-                        <button>
-                            Learn More
-                        </button>
-                    </a>
+                
+                    <button class="hbutton finterbold24">
+                        Learn More
+                    </button>
+                    
                 </article>
                 <section class="hsect">
                     <section>
                         <hr>
-                        <h3>
+                        <h3 class="fdmmono-white12">
                             LIVE COVERAGE
                         </h3>
-                        <button class="button-white-arrow">
-                            <span>
+                        <button class="button-white-arrow objhovfoc">
+                            <span class="finterssbold18 ">
                                 Axiom Mission 3
                             </span>
+                            <svg class="svgspan" xmlns="http://www.w3.org/2000/svg" fill="none" transform="rotate(-45)" viewBox="-2.4 -2.4 28.8 28.8"><rect width="28.8" height="28.8" x="-2.4" y="-2.4" fill="red" stroke-width="0" rx="14.4"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
                         </button> 
                     </section>
                     <section>
                         <hr>
-                        <h3>
-                            NASA BLOG
+                        <h3 class="fdmmono-white12">
+                            LIVE COVERAGE
                         </h3>
-                        <button class="button-white-arrow">
-                            <span>
-                                Space Station Updates
+                        <button class="button-white-arrow objhovfoc">
+                            <span class="finterssbold18 ">
+                                Axiom Mission 3
                             </span>
+                            <svg class="svgspan" xmlns="http://www.w3.org/2000/svg" fill="none" transform="rotate(-45)" viewBox="-2.4 -2.4 28.8 28.8"><rect width="28.8" height="28.8" x="-2.4" y="-2.4" fill="red" stroke-width="0" rx="14.4"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
                         </button> 
                     </section>
                     <section>
                         <hr>
-                        <h3>
-                            LATEST UPDATES
+                        <h3 class="fdmmono-white12">
+                            LIVE COVERAGE
                         </h3>
-                        <button class="button-white-arrow">
-                            <span>
-                                Space Station News
+                        <button class="button-white-arrow objhovfoc">
+                            <span class="finterssbold18 ">
+                                Axiom Mission 3
                             </span>
+                            <svg class="svgspan" xmlns="http://www.w3.org/2000/svg" fill="none" transform="rotate(-45)" viewBox="-2.4 -2.4 28.8 28.8"><rect width="28.8" height="28.8" x="-2.4" y="-2.4" fill="red" stroke-width="0" rx="14.4"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
                         </button> 
                     </section>
-                    
                 </section>
             </div>
             
