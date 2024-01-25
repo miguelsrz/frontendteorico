@@ -9,7 +9,8 @@ html
     padding: 0;
     box-sizing: border-box;
      -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale;
+    color: white;
 }
 a
 {
@@ -20,22 +21,50 @@ p
     text-wrap:pretty;
 }
 
-.finterssbold36
+.txtblack
+{
+    color: black;
+}
+
+.txtgray
+{
+    color: gray;
+}
+.txtlightblack
+{
+    color: #1b1b1b;
+}
+
+
+.finterssbold36-72
 {
     font-family: "inter", sans-serif;
     font-size: 36rem;
-    font-weight: 600;
+    font-weight: 700;
     text-align: left;
-    color: white;
+}
+.finterssbold36-48
+{
+    font-family: "inter", sans-serif;
+    font-size: 36rem;
+    font-weight: 700;
+    text-align: left;
 }
 
+
+.finterssbold32-42
+{
+    font-family: "inter", sans-serif;
+    font-size: 32rem;
+    font-weight: 700;
+    text-align: left;
+}
 .finterssbold18
 {
     font-family: "inter", sans-serif;
     font-size: 18rem;
     font-weight: 600;
     text-align: left;
-    color: white;
 }
 
 .finterbold24
@@ -44,37 +73,59 @@ p
     font-size: 24rem;
     font-weight: 700;
     text-align: left;
-    color: white;
 }
 
-.fpublicsw-grey14
+.finterbold18
 {
-    font-family: "Public Sans Web", sans-serif;
-    font-size: 14rem;
-    color: grey;
+    font-family: "inter", sans-serif;
+    font-size: 18rem;
+    font-weight: 600;
+    text-align: left;
 }
-.fpublicsw-white14
+
+
+.fpublicsw24
 {
     font-family: "Public Sans Web", sans-serif;
-    font-size: 14rem;
-    color: white;
+    font-weight: 700;
+    font-size: 24rem;
     line-height: 24rem;
 }
 
-.fdmmono-white12
+.fpublicsw14
+{
+    font-family: "Public Sans Web", sans-serif;
+    font-size: 14.5rem;
+    line-height: 24rem;
+
+}
+.fpublicsw16
+{
+    font-family: "Public Sans Web", sans-serif;
+    font-size: 16rem;
+    line-height: 24rem;
+}
+
+.fpublicsw-bold12
+{
+    font-family: "Public Sans Web", sans-serif;
+    font-weight: 600;
+    font-size: 14rem;
+}
+
+.fdmmono12
 {
     font-family: "DM Mono", monospace;
-    font-size: 12rem;
-    color: white;
+    font-size: 12.5rem;
     font-weight: 500;
     letter-spacing: 4px;
 }
 
-.fdmmono-white8
+
+.fdmmono8
 {
     font-family: "DM Mono", monospace;
     font-size: 10rem;
-    color: white;
     font-weight: 300;
     letter-spacing: 2px;
 }
@@ -85,7 +136,7 @@ p
     align-items: center;
     justify-content: space-evenly;
     background-color: transparent;
-    border: solid 4px black;
+    border: none;
     padding: .5em 1em;
 }
 
@@ -108,10 +159,12 @@ p
 {
     display: flex;
     align-items:center;
-    justify-content: space-evenly;
+    justify-content: left;
     background-color: transparent;
-    border: solid 4px transparent;
-    padding-top: .5em;
+    border: none;
+    outline: solid 4px transparent;
+    padding: .5em 0;
+    width: max-content;
 }
 
 .button-white-arrow:hover rect
@@ -122,10 +175,11 @@ p
 .objhovfoc:hover
 {
     cursor: pointer;
+
 }
 .objhovfoc:focus
 {
-    border: solid 4px rgb(21, 149, 235);
+    outline: solid 4px rgb(21, 149, 235);
 }
 
 
@@ -167,10 +221,7 @@ p
     min-width: 100%
 }
 
-.button-black-arrow-right
-{
-    margin: 1em 0 1em 0;
-}
+
 
 
 
@@ -250,7 +301,10 @@ nav
         border: solid 1px rgb(75, 75, 75);
         padding-left: .5em;
     }
-
+    .navinput:focus
+    {
+        outline: solid 4px rgb(21, 149, 235);
+    }
     
     .nvsmall
     {
@@ -297,7 +351,7 @@ nav
             justify-content: space-evenly;
             background-color: rgb(212, 35, 35);
             border: solid 4px transparent;
-            padding: .5em;
+            padding: 0.5em 1em 0.5em 1em;
             width: 200px;
             border-radius: 5px;
             cursor: pointer;
@@ -332,7 +386,7 @@ main
 {
     grid-area: main;
     display: grid;
-    grid-template-rows:1fr 880px max-content 880px 1fr 880px max-content;
+    grid-template-rows:max-content 880px max-content 880px max-content 880px max-content;
     grid-template-areas:
     "fnews"
     "fstory"
@@ -352,12 +406,12 @@ main
 {
     grid-area: fnews;
     padding: 3em 2.5em;
-    max-height: 2100px;
+    max-height: 2300px;
 }
     .newsgrid
     {
         display: grid;
-        grid-template-rows: 150px 1265px 1fr;
+        grid-template-rows: max-content 1265px max-content;
         grid-template-areas: 
         "nheader"
         "nblock"
@@ -369,8 +423,23 @@ main
             grid-area:nheader;
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: space-between;
+            
         }
+            .nheader h2
+            {
+                margin-bottom: 1em;
+            }
+            .nheader button
+            {
+                margin-bottom: 1.5em;
+                width: 100%;
+            }
+
+            .nheader button span
+            {
+                width: 204px;
+            }
 
         .nblock
         {
@@ -382,15 +451,34 @@ main
             
             .nbpadding
             {
+                display: block;
                 width: 100%;
-                height: 100%;
-                padding-bottom:1.5em ;
+                height: 95%;
             }
             .nbflex
             {
                 width: 100%;
                 height: 100%;
+                padding: 1.5em;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
             }
+                .nbarticletxt
+                {
+                    display: flex;
+                    align-items: center;
+                    justify-content: left;
+                }
+                    .svgarticle
+                    {
+                        width: 15px;
+                        margin-right: .5em;
+                    }
+                .nbtextsmall
+                {
+                    margin-bottom: 1em;
+                }
 
         .nflex
         {
@@ -398,7 +486,7 @@ main
             display: flex;
             flex-direction: column;
             margin-top: 1em;
-            max-height: 600px;
+            max-height: 900px;
         }
             .nfpadding
             {
@@ -416,6 +504,7 @@ main
                 grid-template-areas: 
                 "nfimg nftext"
                 ;
+                align-items: center;
             }
                 .nffig
                 {
@@ -424,8 +513,8 @@ main
                 }
                     .nfimg
                     {
-                        width: 80px;
-                        height: 80px;
+                        width: 85px;
+                        height: 85px;
                         border-radius: 100%;
                     }
                 
@@ -434,6 +523,11 @@ main
                     grid-area: nftext;
                 }
 
+                    .nftextsmall, .nftextmain
+                    {
+                        margin-bottom: .5em;
+                    }
+                    
 
 .banner
 {
@@ -445,6 +539,7 @@ main
         display: grid;
         grid-template-columns: 1fr;
         height: 100%;
+
     }
 
         .bannerflex
@@ -452,6 +547,11 @@ main
             display: flex;
             flex-direction: column;
             justify-content: end;
+        }
+
+        .bannerflex h2, .bannerflex p
+        {
+            margin-bottom: .5em;
         }
 
 .fstory
@@ -462,14 +562,14 @@ main
 .imgday
 {
     grid-area: imgday;
-    padding: 5em 1.5em;
+    padding: 4em 1.5em;
     height: max-content;
 }
     
     .imgdaygrid
     {
         display: grid;
-        grid-template-rows: 80px max-content max-content   ;
+        grid-template-rows: max-content max-content max-content   ;
         width: 100%;
         height: 100%;
         grid-template-areas: 
@@ -483,21 +583,42 @@ main
         .himgday
         {
             grid-area: himgday;
+            margin-bottom: 2em;
+        }
+
+        .himgday p
+        {
+            margin-bottom: 1em;
         }
         .fimgday
         {
+            justify-self: center;
             display: flex;
             flex-direction: column;
+            align-items: end;
             grid-area: fimgday;
+            margin-bottom: 2em;
+            max-width: 650px;
         }
             .img-imgday
             {
                 width: 100%;
+                
+                margin-bottom: 1em;
             }
-
+            
         .simgday
         {
             grid-area: simgday;
+        }
+
+        .simgday h2 
+        {
+            margin-bottom: 1em;
+        }
+        .simgday p
+        {
+            margin-bottom: 1em;            
         }
         
 
@@ -511,8 +632,7 @@ main
 {
     grid-area: lnews;
     padding: 3em 2.5em;
-    max-height: 2100px;
-
+    max-height: 2300px;
 }
 .explore
 {
@@ -522,13 +642,13 @@ main
 .topics
 {
     grid-area: topics;
-    padding: 2em 1em;
+    padding: 4em 1em;
     min-height: 700px;
 }
 .topicsgrid
 {
     display: grid;
-    grid-template-rows: 120px 1fr;
+    grid-template-rows: max-content 1fr;
     grid-template-areas: 
     'theader'
     'tcardcontainer'
@@ -536,11 +656,26 @@ main
     align-items: center;
     overflow-x:auto;
     height: 100%;
+
 }
-.theader
+
+.topicsheader
 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     grid-area: theader;
+    margin-bottom: 2em ;
+    padding-left: .5em;
 }
+
+.topicsheader p
+{
+    margin-bottom: 2em;
+}
+
+    
+
 .tcardcontainer
 {
     grid-area: tcardcontainer;
@@ -548,7 +683,7 @@ main
     align-items: center;
     overflow-x:auto;
     height: 100%;
-    margin-bottom: 2em;
+    padding: .5em .5em 2em .5em;
 }
 
 .tcardcontainer::-webkit-scrollbar
@@ -567,16 +702,26 @@ main
 .tcardcontainer::-webkit-scrollbar-track
 {
     
-    background-color: rgba(255, 255, 255, 0.055);
+    background-color: rgba(128, 128, 128, 0.301);
 }
 .tcard
 {
     min-width: 80%;
-    height: 500px;
+    height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: end;
     margin: 0 .75em 0 .75em;
+    padding: 2em;
+}
+
+.tcard1
+{
+    margin-left: 0;
+}
+.tcard4
+{
+    margin-right: 0;
 }
 
 
