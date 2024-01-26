@@ -40,24 +40,12 @@
     width: 35px;
 }
 
-.livetext
-{
-    border: solid 1px red;
-    padding: .5em;
-    margin-left: .5em;
-    border-radius: 2px;
-}
-
-.livetext:hover
-{
-    background-color: red;
-}
 
 
 .pagegrid
 {
     display: grid;
-    grid-template-rows: max-content max-content 1fr 600px;
+    grid-template-rows: max-content max-content 1fr max-content;
     grid-template-areas: 
     "nav"
     "header"
@@ -112,16 +100,7 @@ nav
         align-items: center;     
     }
 
-    .nasalive
-    {
-        display: flex;
-        align-items: center;
-    }
-
-    .nasalive:hover .livetext
-    {
-        background-color: rgb(170, 31, 31);;
-    }
+    
 .mainheader
 {
     grid-area: header;
@@ -191,7 +170,7 @@ main
                 align-items: flex-start;
             }
 
-            .nheader button
+            .nheader a
             {
                 width: auto;
             }
@@ -270,7 +249,7 @@ main
     .imgdaygrid
     {
         display: grid;
-        grid-template-columns: 2fr 3fr;
+        grid-template-columns: 1fr 2fr;
         grid-template-rows: 160px 1fr;
         width: 100%;
         height: 100%;
@@ -288,15 +267,21 @@ main
         display: flex;
         justify-content: flex-start;
         grid-area: fimgday;
-        padding: 0 2em;
+        max-width: 850px;
+        
         }
+            .img-imgday
+            {
+                max-width: auto;
+                max-height: 550px;
+            }
         
         .simgday, .himgday
         {
             padding-right: 2.5em;
         }
         
-        .simgday button
+        .simgday a
             {
                 margin-bottom: 0;
             }
@@ -376,29 +361,38 @@ footer
     {
         display: grid;
         height: 100%;
-        grid-template-rows: 2fr 1.5fr 1.5fr 1fr 1fr;
+        grid-template-rows: 1fr 2fr  max-content 1fr;
         grid-template-columns: repeat(6,1fr);
         grid-template-areas: 
         "logofooter logofooter logofooter logofooter logofooter logofooter"
         "nasaabout nasaabout footerlinks footerlinks footerlinks footersocial"
-        "nasaabout nasaabout footerlinks footerlinks footerlinks ."
+
         "nasainfo nasainfo nasainfo nasainfo nasainfo nasainfo"
         "pageinfo pageinfo pageinfo pageinfo pageinfo pageinfo"
         ;
-
-        max-width: 1350px;
+        min-height: 550px;
+        max-height: 640px;
+        max-width: 1450px;
     }
+    
+    
     .footerlinks
     {
         display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-auto-rows: auto;
-
+    
     }
     .footersocial
     {
-        justify-content: space-between;
+        justify-content:flex-start;
+        margin-top: 0;
+        margin-bottom: 2.5em;
     }
+        .footersocial p
+        {
+            margin-bottom: .5em;
+        }
     .nasainfo
     {
         display: grid;
@@ -409,13 +403,10 @@ footer
         {
             margin-bottom: 1em;
         }
+    
     .pageinfo
     {
-        height: auto;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+        padding-top: 0;
     }
 
     @media (min-width: 1300px) {
@@ -439,6 +430,12 @@ footer
             min-width: 23.5%;
             height: 700px;
         }
+        .asocialicon
+            {
+               width: 35px;
+               height: 35px;
+
+            }
     }
     
             
