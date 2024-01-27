@@ -71,7 +71,7 @@ main
 {
     grid-area: main;
     display: grid;
-    grid-template-rows:1fr 640px max-content 880px max-content 640px max-content;
+    grid-template-rows:1fr 880px max-content 880px max-content 640px max-content;
     grid-template-areas:
     "fnews"
     "fstory"

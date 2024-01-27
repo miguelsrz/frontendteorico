@@ -130,7 +130,7 @@ main
 {
     grid-area: main;
     display: grid;
-    grid-template-rows:max-content 640px max-content 800px max-content 640px max-content;
+    grid-template-rows:max-content 880px max-content 800px max-content 640px max-content;
     grid-template-areas:
     "fnews"
     "fstory"
